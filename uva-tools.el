@@ -45,4 +45,3 @@ Codes: 1 ANSI, 2 JAVA, 3 C++, 4 Pascal, 5 C++11, 6 Python."
   (let ((id (file-name-base))
         (file-name (buffer-file-name)))
     (uva-tool--submit id file-name uva-tool-language)))
-
