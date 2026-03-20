@@ -65,3 +65,6 @@ Reports success to the echo area instead of popping up a window."
   (let* ((file-name (buffer-file-name))
          (id (file-name-base file-name)))
     (uva-tool--submit id file-name uva-tool-language)))
+
+(provide 'uva-tool)
+;;; uva-tool.el ends here
