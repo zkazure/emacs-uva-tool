@@ -1,0 +1,6 @@
+#+title: emacs-uva-tool
+
+Submit your solution for UVa OJ's problems from Emacs.
+
+** Requirements
+- [[https://github.com/arafat-hasan/uva-tool][uva-tool]]
