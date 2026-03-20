@@ -1,8 +1,8 @@
 (defun uva-tool--hunt (username num)
-  "hunt for recent summit for specified username"
+  "Fetch recent summit runs for username with uva-tool."
   (async-shell-command (format "uva-tool -hunt -u %s -r %s" username num)))
 
 (defun uva-tool--submit (id file-name lang)
-  "Submit problem with uva-tool"
+  "Submit a problem to UVA with uva-tool"
   (async-shell-command (format "uva-tool -submit %s %s %s"
                                id file-name lang)))
