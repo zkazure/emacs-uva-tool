@@ -14,7 +14,7 @@
   :prefix 'uva-tool-
   :group 'tools)
 
-(defcustom uva-tool-username 'default
+(defcustom uva-tool-username "default"
   "Your username in UVA"
   :group 'uva-tool
   :type 'string)
