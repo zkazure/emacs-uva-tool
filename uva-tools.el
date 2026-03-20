@@ -39,9 +39,21 @@ Codes: 1 ANSI, 2 JAVA, 3 C++, 4 Pascal, 5 C++11, 6 Python."
   (async-shell-command (format "uva-tool -hunt -u %s -r %s" username num)))
 
 (defun uva-tool--submit (id file-name lang)
-  "Submit a problem to UVA with uva-tool"
-  (async-shell-command (format "uva-tool -submit %s %s %s"
-                               id file-name lang)))
+  "Submit a problem to UVA with uva-tool.
+Reports success to the echo area instead of popping up a window."
+  (let ((buffer-name (format "*uva-submit-%s*" id)))
+    (make-process
+     :name "uva-tool-submit"
+     :buffer buffer-name
+     :command (list "uva-tool" "-submit" (format "%s" id) file-name (format "%s" lang))
+     :sentinel (lambda (process event)
+                 (if (string-match-p "finished" event)
+                     (progn
+                       (message "✅ UVA Submission successful for ID: %s" id)
+                       (when (buffer-live-p (process-buffer process))
+                         (kill-buffer (process-buffer process))))
+                   (message "❌ UVA Submission %s failed or exited: %s. Check buffer: %s"
+                            id (string-trim event) buffer-name))))))
 
 ;;;###autoload
 (defun uva-tool-hunt-myself ()
