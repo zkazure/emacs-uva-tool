@@ -5,7 +5,23 @@
 
 (defcustom uva-tool-username 'default
   "Your username in UVA"
+  :group 'uva-tool
   :type 'string)
+
+(defcustom uva-tool-language 5
+  "Programming language for solving UVA problems.
+Codes: 1 ANSI, 2 JAVA, 3 C++, 4 Pascal, 5 C++11, 6 Python."
+  :group 'uva-tool
+  :type '(choice
+          (const :tag "1 (ANSI)" 1)
+          (const :tag "2 (JAVA)" 2)
+          (const :tag "3 (C++)" 3)
+          (const :tag "4 (Pascal)" 4)
+          (const :tag "5 (C++11)" 5)
+          (const :tag "6 (Python)" 6))
+  :validate (lambda (v)
+              (unless (member v '(1 2 3 4 5 6))
+                (error "uva-tool-language must be one of: 1..6"))))
 
 (defun uva-tool--hunt (username num)
   "Fetch recent submits for username with uva-tool."
