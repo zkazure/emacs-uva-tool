@@ -4,3 +4,16 @@ Submit your solution for UVa OJ's problems from Emacs.
 
 ** Requirements
 - [[https://github.com/arafat-hasan/uva-tool][uva-tool]]
+
+** Usage
+1. ~uva-tool-hunt-myself~: get your own submits history.
+2. ~uva-tool-submit-current-file~: submit current file you are editing.
+
+** Customization
+
+| Variable            | Default   | Description                                  |
+|---------------------+-----------+----------------------------------------------|
+| =uva-tool-username= | =default= | username for UVA                             |
+| =uva-tool-language= | =5=       | programming language, =5= stands for *C++11* |
+
+
