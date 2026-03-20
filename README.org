@@ -11,14 +11,20 @@ Submit your solution for UVa OJ's problems from Emacs.
 
 ** Customization
 
-| Variable            | Default   | Description                                  |
-|---------------------+-----------+----------------------------------------------|
-| =uva-tool-username= | =default= | username for UVA                             |
-| =uva-tool-language= | =5=       | programming language, =5= stands for *C++11* |
+| Variable            | Default   | Description                |
+|---------------------+-----------+----------------------------|
+| =uva-tool-username= | =default= | username for UVA           |
+| =uva-tool-language= | =5=       | programming language[fn:1] |
 
+** Configurations
 
-*My keybindings*
 #+begin_src elisp
+  (setq uva-tools-username <your-user-name>)
+  (setq uva-tools-language <number-of-programming-langauge>)
   (global-set-key (kbd "C-c u h") 'uva-tool-hunt-myself)
   (global-set-key (kbd "C-c u s") 'uva-tool-submit-current-file)
 #+end_src
+
+** Footnotes
+
+[fn:1] Language codes 1 for ANSI, 2 for JAVA, 3 for C++, 4 for Pascal, 5 for C++11, 6 for Python.
