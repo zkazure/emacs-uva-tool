@@ -5,7 +5,7 @@
 ;; Author: Kazure Zheng <kazurezheng@gmail.com>
 ;; Keywords: extensions, tools
 ;; URL: https://github.com/zkazure/emacs-uva-tool.git
-;; Version: 0.1.0
+;; Version: 0.2.0
 
 ;;; Code:
 
