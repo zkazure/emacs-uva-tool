@@ -1,3 +1,14 @@
+;;; uva-tool.el --- An uva-too client    -*- lexical-binding: t -*-
+
+;; Copyright (c) 2006 Kazure Zheng
+
+;; Author: Kazure Zheng <kazurezheng@gmail.com>
+;; Keywords: extensions, tools
+;; URL: https://github.com/zkazure/emacs-uva-tool.git
+;; Version: 0.1.0
+
+;;; Code:
+
 (defgroup uva-tool nil
   "uva-tool client"
   :prefix 'uva-tool-
