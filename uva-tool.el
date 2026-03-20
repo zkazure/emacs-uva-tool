@@ -62,6 +62,6 @@ Reports success to the echo area instead of popping up a window."
 (defun uva-tool-submit-current-file ()
   "Submit current file with uva-tool"
   (interactive)
-  (let ((id (file-name-base))
-        (file-name (buffer-file-name)))
+  (let* ((file-name (buffer-file-name))
+         (id (file-name-base file-name)))
     (uva-tool--submit id file-name uva-tool-language)))
