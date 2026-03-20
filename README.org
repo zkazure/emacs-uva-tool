@@ -17,3 +17,8 @@ Submit your solution for UVa OJ's problems from Emacs.
 | =uva-tool-language= | =5=       | programming language, =5= stands for *C++11* |
 
 
+*My keybindings*
+#+begin_src elisp
+  (global-set-key (kbd "C-c u h") 'uva-tool-hunt-myself)
+  (global-set-key (kbd "C-c u s") 'uva-tool-submit-current-file)
+#+end_src
